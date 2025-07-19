@@ -19,6 +19,11 @@
   <input type="text" id="location" placeholder="Enter your town or zip code in MA (e.g. 02139 or Cambridge)" />
   <input type="text" id="radius" placeholder="Distance in miles" />
   <button onclick="geocodeAndSearch()">Search</button>
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+    <option value="date">Soonest</option>
+    <option value="distance">Closest</option>
+    </select>
 
   <div id="results"></div>
 
@@ -71,6 +76,8 @@
   }
 
   function filterEvents(lat, lon, radius) {
+    const sortBy = document.getElementById("sort").value;
+
     const filtered = events.map(e => {
       const eventLat = parseFloat(e.latitude);
       const eventLon = parseFloat(e.longitude);
@@ -79,6 +86,11 @@
       const d = haversine(lat, lon, eventLat, eventLon);
       return { ...e, distance: d };
     }).filter(e => e && e.distance <= radius);
+
+    // Sort if user selected 'distance'
+    if (sortBy === "distance") {
+      filtered.sort((a, b) => a.distance - b.distance);
+    }
 
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = "";
