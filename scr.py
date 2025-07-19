@@ -48,6 +48,9 @@ def fetch_events_with_playwright(pages=3):  # set how many pages you want to scr
                     place = ", ".join(
                         [part.strip() for part in place_parts if part.strip()]
                     )
+                    link_el = card.locator("a").first
+                    link = link_el.get_attribute("href") if link_el else ""
+                    full_link = urljoin(BASE, link) if link else ""
 
                     events.append(
                         {
@@ -57,6 +60,7 @@ def fetch_events_with_playwright(pages=3):  # set how many pages you want to scr
                             "location": place,
                             "latitude": lat,
                             "longitude": lon,
+                            "url": full_link,  # new
                         }
                     )
                 except Exception as e:

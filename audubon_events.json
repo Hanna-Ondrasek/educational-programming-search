@@ -5,7 +5,8 @@
     "ages": "Adults & Families - 8 - 17",
     "location": "Wellfleet Bay Wildlife Sanctuary, South Wellfleet",
     "latitude": "41.88431",
-    "longitude": "-69.988741"
+    "longitude": "-69.988741",
+    "url": "https://www.massaudubon.org/programs/wellfleet-bay/97592-birding-for-all"
   },
   {
     "title": "Mudflat Limbo",
@@ -13,7 +14,8 @@
     "ages": "Adults & Families - 0 - 17",
     "location": "Duxbury Beach, Duxbury",
     "latitude": "42.049773874819",
-    "longitude": "-70.644121214636"
+    "longitude": "-70.644121214636",
+    "url": "https://www.massaudubon.org/programs/north-river/96886-mudflat-limbo"
   },
   {
     "title": "Family Open House: Butterflies & Bugs",
@@ -21,7 +23,8 @@
     "ages": "Adults & Families - 3 - 17",
     "location": "Joppa Flats Education Center, Newburyport",
     "latitude": "42.799175",
-    "longitude": "-70.847897"
+    "longitude": "-70.847897",
+    "url": "https://www.massaudubon.org/programs/joppa-flats/97334-family-open-house-butterflies-bugs"
   },
   {
     "title": "Boston Area Beekeepers Open Hives",
@@ -29,7 +32,8 @@
     "ages": "Families - children 5 - 12 years",
     "location": "Boston Nature Center and Wildlife Sanctuary, Mattapan",
     "latitude": "42.288028114492",
-    "longitude": "-71.101164054106"
+    "longitude": "-71.101164054106",
+    "url": "https://www.massaudubon.org/programs/boston-nature-center/97861-boston-area-beekeepers-open-hives"
   },
   {
     "title": "Turtle Time",
@@ -37,7 +41,8 @@
     "ages": "Families - children 4 - 10 years",
     "location": "Ipswich River Wildlife Sanctuary, Topsfield",
     "latitude": "42.6342",
-    "longitude": "-70.925018"
+    "longitude": "-70.925018",
+    "url": "https://www.massaudubon.org/programs/ipswich-river/97647-turtle-time"
   },
   {
     "title": "Glen Meadow Wildlife Exploration",
@@ -45,7 +50,8 @@
     "ages": "Adults & Families - 0 - 17",
     "location": "Greylock Glen, Adams",
     "latitude": null,
-    "longitude": null
+    "longitude": null,
+    "url": "https://www.massaudubon.org/programs/pleasant-valley/97180-glen-meadow-wildlife-exploration"
   },
   {
     "title": "Fish Feeding Fun!",
@@ -53,7 +59,8 @@
     "ages": "Adults & Families - 2 - 17",
     "location": "Wellfleet Bay Wildlife Sanctuary, South Wellfleet",
     "latitude": "41.88431",
-    "longitude": "-69.988741"
+    "longitude": "-69.988741",
+    "url": "https://www.massaudubon.org/programs/wellfleet-bay/97901-fish-feeding-fun"
   },
   {
     "title": "Farmer's Helpers",
@@ -61,7 +68,8 @@
     "ages": "Families - children 4 - 12 years",
     "location": "Drumlin Farm Wildlife Sanctuary, Lincoln",
     "latitude": "42.409882",
-    "longitude": "-71.331782"
+    "longitude": "-71.331782",
+    "url": "https://www.massaudubon.org/programs/drumlin-farm/97455-farmer-s-helpers"
   },
   {
     "title": "Firefly Safari",
@@ -69,7 +77,8 @@
     "ages": "Families - children 5 - 17",
     "location": "Broadmoor Wildlife Sanctuary, Natick",
     "latitude": "42.256156871547",
-    "longitude": "-71.340343344989"
+    "longitude": "-71.340343344989",
+    "url": "https://www.massaudubon.org/programs/broadmoor/97472-firefly-safari"
   },
   {
     "title": "Weekends at Trailside: Animal Architects",
@@ -77,7 +86,8 @@
     "ages": "Families - children 6 - 10 years",
     "location": "Blue Hills Trailside Museum, Milton",
     "latitude": "42.218346",
-    "longitude": "-71.118649"
+    "longitude": "-71.118649",
+    "url": "https://www.massaudubon.org/programs/blue-hills/97840-weekends-at-trailside-animal-architects"
   },
   {
     "title": "Seashore Discovery",
@@ -85,7 +95,8 @@
     "ages": "Adults & Families - 1 - 17",
     "location": "Felix Neck Wildlife Sanctuary, Edgartown",
     "latitude": "41.414087",
-    "longitude": "-70.563592"
+    "longitude": "-70.563592",
+    "url": "https://www.massaudubon.org/programs/felix-neck/97357-seashore-discovery"
   },
   {
     "title": "In Search of Horseshoe Crabs",
@@ -93,7 +104,8 @@
     "ages": "Adults & Families - 0 - 17",
     "location": "Long Pasture Wildlife Sanctuary, Cummaquid",
     "latitude": "41.70977",
-    "longitude": "-70.275297"
+    "longitude": "-70.275297",
+    "url": "https://www.massaudubon.org/programs/long-pasture/97620-in-search-of-horseshoe-crabs"
   },
   {
     "title": "Creature Feature",
@@ -101,7 +113,8 @@
     "ages": "Families - children 2 - 16 years",
     "location": "Wellfleet Bay Wildlife Sanctuary, South Wellfleet",
     "latitude": "41.88431",
-    "longitude": "-69.988741"
+    "longitude": "-69.988741",
+    "url": "https://www.massaudubon.org/programs/wellfleet-bay/97625-creature-feature"
   },
   {
     "title": "Sea Creature Feature: Sand Sculptures",
@@ -109,7 +122,8 @@
     "ages": "Adults & Families - 0 - 17",
     "location": "Duxbury Beach, Duxbury",
     "latitude": "42.049773874819",
-    "longitude": "-70.644121214636"
+    "longitude": "-70.644121214636",
+    "url": "https://www.massaudubon.org/programs/north-river/96882-sea-creature-feature-sand-sculptures"
   },
   {
     "title": "Wildlife Encounters",
@@ -117,7 +131,8 @@
     "ages": "Adults & Families - 0 - 17",
     "location": "Felix Neck Wildlife Sanctuary, Edgartown",
     "latitude": "41.414087",
-    "longitude": "-70.563592"
+    "longitude": "-70.563592",
+    "url": "https://www.massaudubon.org/programs/felix-neck/97375-wildlife-encounters"
   },
   {
     "title": "Seashore Ramble",
@@ -125,7 +140,8 @@
     "ages": "Families - children 4 - 17",
     "location": "Wellfleet Bay Wildlife Sanctuary, South Wellfleet",
     "latitude": "41.88431",
-    "longitude": "-69.988741"
+    "longitude": "-69.988741",
+    "url": "https://www.massaudubon.org/programs/wellfleet-bay/97424-seashore-ramble"
   },
   {
     "title": "Summer Nights Paddling",
@@ -133,7 +149,8 @@
     "ages": "Adults & Families - 4 - 17",
     "location": "Magazine Beach Park Nature Center, Cambridge",
     "latitude": "42.354369356809",
-    "longitude": "-71.112357027724"
+    "longitude": "-71.112357027724",
+    "url": "https://www.massaudubon.org/programs/magazine-beach/97491-summer-nights-paddling"
   },
   {
     "title": "Marine Discovery Tour",
@@ -141,7 +158,8 @@
     "ages": "Adults & Families - 4 - 17",
     "location": "Oak Bluffs Harbor, Oak Bluffs",
     "latitude": "41.4579692371",
-    "longitude": "-70.556229491017"
+    "longitude": "-70.556229491017",
+    "url": "https://www.massaudubon.org/programs/felix-neck/97542-marine-discovery-tour"
   },
   {
     "title": "Science of the South Shore - Meet a Reptile",
@@ -149,7 +167,8 @@
     "ages": "Families - children 3 - 17",
     "location": "Tidmarsh Wildlife Sanctuary, Plymouth",
     "latitude": "41.916762098862",
-    "longitude": "-70.572936573256"
+    "longitude": "-70.572936573256",
+    "url": "https://www.massaudubon.org/programs/tidmarsh/97735-science-of-the-south-shore-meet-a-reptile"
   },
   {
     "title": "Seashore Discovery",
@@ -157,7 +176,8 @@
     "ages": "Adults & Families - 1 - 17",
     "location": "Felix Neck Wildlife Sanctuary, Edgartown",
     "latitude": "41.414087",
-    "longitude": "-70.563592"
+    "longitude": "-70.563592",
+    "url": "https://www.massaudubon.org/programs/felix-neck/97358-seashore-discovery"
   },
   {
     "title": "Bats: Nighttime Navigators",
@@ -165,7 +185,8 @@
     "ages": "Families - children 5 - 12 years",
     "location": "Arcadia Wildlife Sanctuary, Easthampton",
     "latitude": "42.289188",
-    "longitude": "-72.644581"
+    "longitude": "-72.644581",
+    "url": "https://www.massaudubon.org/programs/arcadia/96821-bats-nighttime-navigators"
   },
   {
     "title": "Feed the Beach Creatures: Rocky Shore Residents",
@@ -173,7 +194,8 @@
     "ages": "Families - children 4 - 15 years",
     "location": "Joppa Flats Education Center, Newburyport",
     "latitude": "42.799175",
-    "longitude": "-70.847897"
+    "longitude": "-70.847897",
+    "url": "https://www.massaudubon.org/programs/joppa-flats/96661-feed-the-beach-creatures-rocky-shore-residents"
   },
   {
     "title": "Family Evening at the Beaver Ponds",
@@ -181,7 +203,8 @@
     "ages": "Families - children 4 - 17",
     "location": "Pleasant Valley Wildlife Sanctuary, Lenox",
     "latitude": "42.382621526049",
-    "longitude": "-73.298806578107"
+    "longitude": "-73.298806578107",
+    "url": "https://www.massaudubon.org/programs/pleasant-valley/97182-family-evening-at-the-beaver-ponds"
   },
   {
     "title": "DCR Summer Nights - Carson Beach",
@@ -189,6 +212,7 @@
     "ages": "Families - children 0 - 17",
     "location": "Boston Nature Center and Wildlife Sanctuary, Mattapan",
     "latitude": "42.288028114492",
-    "longitude": "-71.101164054106"
+    "longitude": "-71.101164054106",
+    "url": "https://www.massaudubon.org/programs/boston-nature-center/98056-dcr-summer-nights-carson-beach"
   }
 ]

@@ -23,84 +23,86 @@
   <div id="results"></div>
 
   <script>
-    let events = [];
+  let events = [];
 
-    fetch("audubon_events.json")
+  fetch("audubon_events.json")
+    .then(res => res.json())
+    .then(data => { events = data; })
+    .catch(err => console.error("Failed to load events:", err));
+
+  function haversine(lat1, lon1, lat2, lon2) {
+    const toRad = x => (x * Math.PI) / 180;
+    const R = 3959; // miles
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+    const a = Math.sin(dLat / 2) ** 2 +
+              Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+
+  function geocodeAndSearch() {
+    const location = document.getElementById("location").value.trim();
+    const radius = parseFloat(document.getElementById("radius").value);
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+
+    if (!location || isNaN(radius)) {
+      alert("Please enter a valid town/zip and distance.");
+      return;
+    }
+
+    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(location + ', MA')}&format=json&limit=1`;
+
+    fetch(url)
       .then(res => res.json())
-      .then(data => { events = data; })
-      .catch(err => console.error("Failed to load events:", err));
+      .then(data => {
+        if (!data.length) {
+          resultsDiv.innerHTML = "<p>Location not found. Try another town or zip.</p>";
+          return;
+        }
 
-    function haversine(lat1, lon1, lat2, lon2) {
-        const toRad = x => (x * Math.PI) / 180;
-        const R = 3959; // Earth's radius in miles
-        const dLat = toRad(lat2 - lat1);
-        const dLon = toRad(lon2 - lon1);
-        const a = Math.sin(dLat / 2) ** 2 +
-                    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
-        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    }
+        const lat = parseFloat(data[0].lat);
+        const lon = parseFloat(data[0].lon);
+        filterEvents(lat, lon, radius);
+      })
+      .catch(() => {
+        resultsDiv.innerHTML = "<p>Error looking up location.</p>";
+      });
+  }
 
-    function geocodeAndSearch() {
-      const location = document.getElementById("location").value.trim();
-      const radius = parseFloat(document.getElementById("radius").value);
-      const resultsDiv = document.getElementById("results");
-      resultsDiv.innerHTML = "";
+  function filterEvents(lat, lon, radius) {
+    const filtered = events.map(e => {
+      const eventLat = parseFloat(e.latitude);
+      const eventLon = parseFloat(e.longitude);
+      if (isNaN(eventLat) || isNaN(eventLon)) return null;
 
-      if (!location || isNaN(radius)) {
-        alert("Please enter a valid town/zip and distance.");
-        return;
-      }
-
-      const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(location + ', MA')}&format=json&limit=1`;
-
-      fetch(url)
-        .then(res => res.json())
-        .then(data => {
-          if (!data.length) {
-            resultsDiv.innerHTML = "<p>Location not found. Try another town or zip.</p>";
-            return;
-          }
-
-          const lat = parseFloat(data[0].lat);
-          const lon = parseFloat(data[0].lon);
-          console.log("Geocoded input:", lat, lon);
-          filterEvents(lat, lon, radius);
-        })
-        .catch(() => {
-          resultsDiv.innerHTML = "<p>Error looking up location.</p>";
-        });
-    }
-
-    function filterEvents(lat, lon, radius) {
-    const filtered = events.filter(e => {
-        const eventLat = parseFloat(e.latitude);
-        const eventLon = parseFloat(e.longitude);
-        if (isNaN(eventLat) || isNaN(eventLon)) return false;
-
-        const d = haversine(lat, lon, eventLat, eventLon);
-        console.log(`Distance to ${e.title}: ${d.toFixed(2)} miles`);
-        return d <= radius;
-    });
+      const d = haversine(lat, lon, eventLat, eventLon);
+      return { ...e, distance: d };
+    }).filter(e => e && e.distance <= radius);
 
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = "";
 
     if (!filtered.length) {
-        resultsDiv.innerHTML = "<p>No events found in range.</p>";
-        return;
+      resultsDiv.innerHTML = "<p>No events found in range.</p>";
+      return;
     }
 
     filtered.forEach(e => {
-        const div = document.createElement("div");
-        div.className = "card";
-        div.innerHTML = `
-        <div class="title">${e.title}</div>
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `
+        <div class="title">
+          <a href="${e.url}" target="_blank" rel="noopener">${e.title}</a>
+        </div>
         <div>${e.date} — ${e.ages}</div>
         <div class="sub">${e.location}</div>
-        `;
-        resultsDiv.appendChild(div);
+        <div>${e.distance.toFixed(1)} miles away</div>
+      `;
+      resultsDiv.appendChild(div);
     });
-    }
-  </script>
+  }
+</script>
+
 </body>
 </html>
