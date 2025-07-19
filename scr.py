@@ -1,5 +1,6 @@
 from playwright.sync_api import sync_playwright
 from urllib.parse import urljoin
+import json
 
 BASE = "https://www.massaudubon.org"
 
@@ -62,6 +63,11 @@ def fetch_events_with_playwright(pages=3):  # set how many pages you want to scr
                     print(f"[WARN] Error parsing card {i + 1} on page {page_num}: {e}")
 
         browser.close()
+        # Save to JSON
+        with open("audubon_events.json", "w", encoding="utf-8") as f:
+            json.dump(events, f, ensure_ascii=False, indent=2)
+        print("[DEBUG] Saved to audubon_events.json")
+
     return events
 
 
