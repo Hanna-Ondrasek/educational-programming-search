@@ -1,95 +1,5 @@
 [
   {
-    "title": "Birding for All",
-    "date": "Saturday, July 19\n\n9:00-10:00am",
-    "ages": "Adults & Families - 8 - 17",
-    "location": "Wellfleet Bay Wildlife Sanctuary, South Wellfleet",
-    "latitude": "41.88431",
-    "longitude": "-69.988741",
-    "url": "https://www.massaudubon.org/programs/wellfleet-bay/97592-birding-for-all"
-  },
-  {
-    "title": "Mudflat Limbo",
-    "date": "Saturday, July 19\n\n9:30-11:00am",
-    "ages": "Adults & Families - 0 - 17",
-    "location": "Duxbury Beach, Duxbury",
-    "latitude": "42.049773874819",
-    "longitude": "-70.644121214636",
-    "url": "https://www.massaudubon.org/programs/north-river/96886-mudflat-limbo"
-  },
-  {
-    "title": "Family Open House: Butterflies & Bugs",
-    "date": "Saturday, July 19\n\n10:00am-3:00pm",
-    "ages": "Adults & Families - 3 - 17",
-    "location": "Joppa Flats Education Center, Newburyport",
-    "latitude": "42.799175",
-    "longitude": "-70.847897",
-    "url": "https://www.massaudubon.org/programs/joppa-flats/97334-family-open-house-butterflies-bugs"
-  },
-  {
-    "title": "Boston Area Beekeepers Open Hives",
-    "date": "Saturday, July 19\n\n10:00am-12:00pm",
-    "ages": "Families - children 5 - 12 years",
-    "location": "Boston Nature Center and Wildlife Sanctuary, Mattapan",
-    "latitude": "42.288028114492",
-    "longitude": "-71.101164054106",
-    "url": "https://www.massaudubon.org/programs/boston-nature-center/97861-boston-area-beekeepers-open-hives"
-  },
-  {
-    "title": "Turtle Time",
-    "date": "Saturday, July 19\n\n10:00-11:30am",
-    "ages": "Families - children 4 - 10 years",
-    "location": "Ipswich River Wildlife Sanctuary, Topsfield",
-    "latitude": "42.6342",
-    "longitude": "-70.925018",
-    "url": "https://www.massaudubon.org/programs/ipswich-river/97647-turtle-time"
-  },
-  {
-    "title": "Glen Meadow Wildlife Exploration",
-    "date": "Saturday, July 19\n\nSessions from 10:00am-3:00pm",
-    "ages": "Adults & Families - 0 - 17",
-    "location": "Greylock Glen, Adams",
-    "latitude": null,
-    "longitude": null,
-    "url": "https://www.massaudubon.org/programs/pleasant-valley/97180-glen-meadow-wildlife-exploration"
-  },
-  {
-    "title": "Fish Feeding Fun!",
-    "date": "Class 7 of 19\n\nSaturday, July 19\n\n12:00-12:20pm",
-    "ages": "Adults & Families - 2 - 17",
-    "location": "Wellfleet Bay Wildlife Sanctuary, South Wellfleet",
-    "latitude": "41.88431",
-    "longitude": "-69.988741",
-    "url": "https://www.massaudubon.org/programs/wellfleet-bay/97901-fish-feeding-fun"
-  },
-  {
-    "title": "Farmer's Helpers",
-    "date": "Saturday, July 19\n\n3:30-5:00pm",
-    "ages": "Families - children 4 - 12 years",
-    "location": "Drumlin Farm Wildlife Sanctuary, Lincoln",
-    "latitude": "42.409882",
-    "longitude": "-71.331782",
-    "url": "https://www.massaudubon.org/programs/drumlin-farm/97455-farmer-s-helpers"
-  },
-  {
-    "title": "Firefly Safari",
-    "date": "Saturday, July 19\n\n7:30-9:00pm",
-    "ages": "Families - children 5 - 17",
-    "location": "Broadmoor Wildlife Sanctuary, Natick",
-    "latitude": "42.256156871547",
-    "longitude": "-71.340343344989",
-    "url": "https://www.massaudubon.org/programs/broadmoor/97472-firefly-safari"
-  },
-  {
-    "title": "Weekends at Trailside: Animal Architects",
-    "date": "Sunday, July 20\n\n10:00-11:00am",
-    "ages": "Families - children 6 - 10 years",
-    "location": "Blue Hills Trailside Museum, Milton",
-    "latitude": "42.218346",
-    "longitude": "-71.118649",
-    "url": "https://www.massaudubon.org/programs/blue-hills/97840-weekends-at-trailside-animal-architects"
-  },
-  {
     "title": "Seashore Discovery",
     "date": "Monday, July 21\n\n10:00-11:30am",
     "ages": "Adults & Families - 1 - 17",
@@ -214,5 +124,419 @@
     "latitude": "42.288028114492",
     "longitude": "-71.101164054106",
     "url": "https://www.massaudubon.org/programs/boston-nature-center/98056-dcr-summer-nights-carson-beach"
+  },
+  {
+    "title": "Meet a Naturalist",
+    "date": "Thursday, July 24\n\n9:00am-12:00pm",
+    "ages": "Adults & Families - 0 - 17",
+    "location": "Tidmarsh Wildlife Sanctuary, Plymouth",
+    "latitude": "41.916762098862",
+    "longitude": "-70.572936573256",
+    "url": "https://www.massaudubon.org/programs/tidmarsh/97728-meet-a-naturalist"
+  },
+  {
+    "title": "Bathyscopes: Underwater Windows",
+    "date": "Thursday, July 24\n\n9:30-11:00am",
+    "ages": "Adults & Families - 8 - 17",
+    "location": "Duxbury Beach, Duxbury",
+    "latitude": "42.049773874819",
+    "longitude": "-70.644121214636",
+    "url": "https://www.massaudubon.org/programs/north-river/96883-bathyscopes-underwater-windows"
+  },
+  {
+    "title": "Preschool Nature Detectives",
+    "date": "Thursday, July 24\n\n10:00-11:00am",
+    "ages": "Families - children 3 - 6 years",
+    "location": "Magazine Beach Park Nature Center, Cambridge",
+    "latitude": "42.354369356809",
+    "longitude": "-71.112357027724",
+    "url": "https://www.massaudubon.org/programs/magazine-beach/96946-preschool-nature-detectives"
+  },
+  {
+    "title": "Traveling Tide Pool",
+    "date": "Class 4 of 6\n\nThursday, July 24\n\n1:00-3:00pm",
+    "ages": "Adults & Families - 3 - 17",
+    "location": "Parker River National Wildlife Refuge, Newburyport",
+    "latitude": "42.790849167324",
+    "longitude": "-70.809920370816",
+    "url": "https://www.massaudubon.org/programs/joppa-flats/97099-traveling-tide-pool"
+  },
+  {
+    "title": "All Family Field Trip: Let's Look for Whales",
+    "date": "Thursday, July 24\n\n1:30-5:30pm",
+    "ages": "Families - children 5 - 12 years",
+    "location": "Joppa Flats Education Center, Newburyport",
+    "latitude": "42.799175",
+    "longitude": "-70.847897",
+    "url": "https://www.massaudubon.org/programs/joppa-flats/98235-all-family-field-trip-let-s-look-for-whales"
+  },
+  {
+    "title": "Fish Feeding Fun!",
+    "date": "Class 8 of 19\n\nThursday, July 24\n\n1:30-1:50pm",
+    "ages": "Adults & Families - 2 - 17",
+    "location": "Wellfleet Bay Wildlife Sanctuary, South Wellfleet",
+    "latitude": "41.88431",
+    "longitude": "-69.988741",
+    "url": "https://www.massaudubon.org/programs/wellfleet-bay/97901-fish-feeding-fun"
+  },
+  {
+    "title": "DCR Summer Nights at the Trailside Museum",
+    "date": "Thursday, July 24\n\n4:00-7:00pm",
+    "ages": "Adults & Families - 0 - 17",
+    "location": "Blue Hills Trailside Museum, Milton",
+    "latitude": "42.218346",
+    "longitude": "-71.118649",
+    "url": "https://www.massaudubon.org/programs/blue-hills/97811-dcr-summer-nights-at-the-trailside-museum"
+  },
+  {
+    "title": "Beavers at Dusk",
+    "date": "Thursday, July 24\n\n6:30-8:00pm",
+    "ages": "Families - children 4 - 17",
+    "location": "Ipswich River Wildlife Sanctuary, Topsfield",
+    "latitude": "42.6342",
+    "longitude": "-70.925018",
+    "url": "https://www.massaudubon.org/programs/ipswich-river/97671-beavers-at-dusk"
+  },
+  {
+    "title": "Nature Tales: Growing Season",
+    "date": "Friday, July 25\n\n10:00-10:45am",
+    "ages": "Families - children 3 - 5 years",
+    "location": "Blue Hills Trailside Museum, Milton",
+    "latitude": "42.218346",
+    "longitude": "-71.118649",
+    "url": "https://www.massaudubon.org/programs/blue-hills/97842-nature-tales-growing-season"
+  },
+  {
+    "title": "ADA Day Celebration",
+    "date": "Friday, July 25\n\n10:00am-2:00pm",
+    "ages": "Adults & Families - 0 - 17",
+    "location": "Long Pasture Wildlife Sanctuary, Cummaquid",
+    "latitude": "41.70977",
+    "longitude": "-70.275297",
+    "url": "https://www.massaudubon.org/programs/long-pasture/97900-ada-day-celebration"
+  },
+  {
+    "title": "Write for the Birds at the Discovery Center in Philadelphia",
+    "date": "JUL 23 — 7:00 pm - 9:00 pm",
+    "ages": "All ages",
+    "location": "Audubon Pennsylvania, Philadelphia, PA",
+    "latitude": "40.1209827",
+    "longitude": "-75.0277871",
+    "url": "https://www.audubon.org/events/write-birds-discovery-center-philadelphia"
+  },
+  {
+    "title": "Write for the Birds at the Discovery Center in Philadelphia",
+    "date": "JUL 23 — 7:00 pm - 9:00 pm",
+    "ages": "All ages",
+    "location": "Audubon Maryland-DC, Philadelphia, PA",
+    "latitude": "39.952583",
+    "longitude": "-75.165222",
+    "url": "https://www.audubon.org/events/write-birds-discovery-center-philadelphia-0"
+  },
+  {
+    "title": "Bat Activity Trends Volunteer Event",
+    "date": "JUL 23 — 8:00 pm - 9:30 pm",
+    "ages": "All ages",
+    "location": "Seward Park Audubon Center, Seattle, WA",
+    "latitude": "47.5599",
+    "longitude": "-122.2222",
+    "url": "https://www.audubon.org/events/bat-activity-trends-volunteer-event-3"
+  },
+  {
+    "title": "Corkscrew Family Night Tour",
+    "date": "JUL 23 — 8:15 pm - 9:45 pm",
+    "ages": "All ages",
+    "location": "Corkscrew Swamp Sanctuary, Naples, FL",
+    "latitude": "26.3755476",
+    "longitude": "-81.6042362",
+    "url": "https://tickets.audubon.org/events/5e526208-8b73-0ae6-2c8c-3f9a9a5a8bf4"
+  },
+  {
+    "title": "Member Adult Discovery Walk",
+    "date": "JUL 24 — 8:00 am - 9:30 am",
+    "ages": "All ages",
+    "location": "Aullwood Audubon Center and Farm, Dayton, OH",
+    "latitude": "39.8732224",
+    "longitude": "-84.2752733",
+    "url": "https://www.audubon.org/events/member-adult-discovery-walk-4"
+  },
+  {
+    "title": "Audubon Adventure Camp",
+    "date": "JUL 24 — 8:30 am - 1:00 pm",
+    "ages": "All ages",
+    "location": "Trinity River Audubon Center, Dallas, TX",
+    "latitude": "32.7055158",
+    "longitude": "-96.7044597",
+    "url": "https://www.audubon.org/events/audubon-adventure-camp-5"
+  },
+  {
+    "title": "The Faerie Houses of Aullwood",
+    "date": "JUL 24 — 9:00 am - 5:00 pm",
+    "ages": "All ages",
+    "location": "Aullwood Audubon Center and Farm, Dayton, OH",
+    "latitude": "39.8732224",
+    "longitude": "-84.2752733",
+    "url": "https://www.audubon.org/events/faerie-houses-aullwood-7"
+  },
+  {
+    "title": "Summer Classes: Raptors in Flight",
+    "date": "JUL 24 — 10:00 am - 11:00 am",
+    "ages": "All ages",
+    "location": "Dogwood Canyon Audubon Center at Cedar Hill, Cedar Hill, TX",
+    "latitude": "32.5518",
+    "longitude": "-96.9602",
+    "url": "https://www.audubon.org/events/summer-classes-raptors-flight"
+  },
+  {
+    "title": "Birding for Kids at the Starksboro Library",
+    "date": "JUL 24 — 11:00 am - 1:00 pm",
+    "ages": "All ages",
+    "location": "Audubon Vermont, VT",
+    "latitude": "44.3468514",
+    "longitude": "-72.9963758",
+    "url": "https://www.audubon.org/events/birding-kids-starksboro-library"
+  },
+  {
+    "title": "Community Time",
+    "date": "JUL 24 — 1:00 pm - 3:30 pm",
+    "ages": "All ages",
+    "location": "Constitution Marsh Audubon Center and Sanctuary, Garrison, NY",
+    "latitude": "41.40141",
+    "longitude": "-73.9382944",
+    "url": "https://tickets.audubon.org/events/0195c95b-7560-e10d-a61b-1a69285c7fe5"
+  },
+  {
+    "title": "Bent of the River - Attracting Birds By Season at Trumbull Library",
+    "date": "JUL 24 — 5:30 pm - 6:45 pm",
+    "ages": "All ages",
+    "location": "Audubon Connecticut, Trumbull, CT",
+    "latitude": "41.2879305",
+    "longitude": "-73.2129806",
+    "url": "https://trumbull.libcal.com/event/14682760"
+  },
+  {
+    "title": "Birding by Canoe at the John James Audubon Center",
+    "date": "JUL 24 — 6:00 pm - 7:30 pm",
+    "ages": "All ages",
+    "location": "Audubon Maryland-DC, Audubon, PA",
+    "latitude": "40.1215624",
+    "longitude": "-75.4371849",
+    "url": "https://www.audubon.org/events/birding-canoe-john-james-audubon-center-3"
+  },
+  {
+    "title": "Birding by Canoe at the John James Audubon Center",
+    "date": "JUL 24 — 6:00 pm - 7:30 pm",
+    "ages": "All ages",
+    "location": "Audubon Pennsylvania, Audubon, PA",
+    "latitude": "40.1215624",
+    "longitude": "-75.4371849",
+    "url": "https://www.audubon.org/events/birding-canoe-john-james-audubon-center-4"
+  },
+  {
+    "title": "Corkscrew Night Tour",
+    "date": "JUL 24 — 8:00 pm - 10:15 pm",
+    "ages": "All ages",
+    "location": "Corkscrew Swamp Sanctuary, Naples, FL",
+    "latitude": "26.3755476",
+    "longitude": "-81.6042362",
+    "url": "https://tickets.audubon.org/events/3fbaf366-3e5a-4870-441f-5d5fb4fc7410"
+  },
+  {
+    "title": "Audubon Adventure Camp",
+    "date": "JUL 25 — 8:30 am - 1:00 pm",
+    "ages": "All ages",
+    "location": "Trinity River Audubon Center, Dallas, TX",
+    "latitude": "32.7055158",
+    "longitude": "-96.7044597",
+    "url": "https://www.audubon.org/events/audubon-adventure-camp-6"
+  },
+  {
+    "title": "The Faerie Houses of Aullwood",
+    "date": "JUL 25 — 9:00 am - 5:00 pm",
+    "ages": "All ages",
+    "location": "Aullwood Audubon Center and Farm, Dayton, OH",
+    "latitude": "39.8732224",
+    "longitude": "-84.2752733",
+    "url": "https://www.audubon.org/events/faerie-houses-aullwood-12"
+  },
+  {
+    "title": "Community Time",
+    "date": "JUL 25 — 9:30 am - 12:00 pm",
+    "ages": "All ages",
+    "location": "Constitution Marsh Audubon Center and Sanctuary, Garrison, NY",
+    "latitude": "41.40141",
+    "longitude": "-73.9382944",
+    "url": "https://tickets.audubon.org/events/0195c95b-7560-e10d-a61b-1a69285c7fe5"
+  },
+  {
+    "title": "Artist in Residence 2025",
+    "date": "JUL 25 — 10:00 am - 2:00 pm",
+    "ages": "All ages",
+    "location": "Dogwood Canyon Audubon Center at Cedar Hill, Cedar Hill, TX",
+    "latitude": "32.5518",
+    "longitude": "-96.9602",
+    "url": "https://www.audubon.org/events/artist-residence-2025-12"
+  },
+  {
+    "title": "On the Canals Kayaking Adventure AM",
+    "date": "JUL 25 — 10:00 am - 11:30 am",
+    "ages": "All ages",
+    "location": "Montezuma Audubon Center, Savannah, NY",
+    "latitude": "43.0456",
+    "longitude": "-76.7107",
+    "url": "https://act.audubon.org/a/on-the-canals-montezuma-kayak-adventure-friday-july-25-10am?aud_path=/events"
+  },
+  {
+    "title": "Nature Story Time",
+    "date": "JUL 25 — 10:30 am - 11:15 am",
+    "ages": "All ages",
+    "location": "Randall Davey Audubon Center, Santa Fe, NM",
+    "latitude": "35.6881882",
+    "longitude": "-105.884613",
+    "url": "https://www.audubon.org/events/nature-story-time"
+  },
+  {
+    "title": "Storytime Under the Pepper Tree at the Audubon Center",
+    "date": "JUL 25 — 10:30 am - 11:30 am",
+    "ages": "All ages",
+    "location": "Audubon Center at Debs Park, Los Angeles, CA",
+    "latitude": "34.0976355",
+    "longitude": "-118.2012972",
+    "url": "https://act.audubon.org/a/storytime-under-pepper-tree-audubon-center?aud_path=/events"
+  },
+  {
+    "title": "Community Time",
+    "date": "JUL 25 — 1:00 pm - 3:30 pm",
+    "ages": "All ages",
+    "location": "Constitution Marsh Audubon Center and Sanctuary, Garrison, NY",
+    "latitude": "41.40141",
+    "longitude": "-73.9382944",
+    "url": "https://tickets.audubon.org/events/0195c95b-7560-e10d-a61b-1a69285c7fe5"
+  },
+  {
+    "title": "Tours of the Historic Randall Davey House and Studio",
+    "date": "JUL 25 — 2:00 pm - 3:30 pm",
+    "ages": "All ages",
+    "location": "Randall Davey Audubon Center, Santa Fe, NM",
+    "latitude": "35.6881882",
+    "longitude": "-105.884613",
+    "url": "https://www.audubon.org/events/tours-historic-randall-davey-house-and-studio-6"
+  },
+  {
+    "title": "On the Canals Kayaking Adventure PM",
+    "date": "JUL 25 — 2:00 pm - 3:30 pm",
+    "ages": "All ages",
+    "location": "Montezuma Audubon Center, Savannah, NY",
+    "latitude": "43.0456",
+    "longitude": "-76.7107",
+    "url": "https://act.audubon.org/a/on-the-canals-montezuma-kayak-adventure-friday-july-25-2pm?aud_path=/events"
+  },
+  {
+    "title": "Community Movie Night",
+    "date": "JUL 25 — 6:00 pm - 10:00 pm",
+    "ages": "All ages",
+    "location": "Audubon Center at Debs Park, Los Angeles, CA",
+    "latitude": "34.0976355",
+    "longitude": "-118.2012972",
+    "url": "https://act.audubon.org/a/community-movie-night-1?aud_path=/events"
+  },
+  {
+    "title": "Magnificent Moths Evening Adventure",
+    "date": "JUL 25 — 8:00 pm - 9:30 pm",
+    "ages": "All ages",
+    "location": "Greenwich Audubon Center, Greenwich, CT",
+    "latitude": "41.0180",
+    "longitude": "-73.6190",
+    "url": "https://tickets.audubon.org/events/01978e72-8802-e244-dac2-773034e056c8"
+  },
+  {
+    "title": "Sharon Audubon Center: National Moth Week: Drop-in Moth Celebration",
+    "date": "JUL 25 — 8:30 pm - 10:00 pm",
+    "ages": "All ages",
+    "location": "Audubon Connecticut, Sharon, CT",
+    "latitude": "41.8797",
+    "longitude": "-73.5350",
+    "url": "https://act.audubon.org/a/ct-sac-national-moth-week-drop-moth-celebration-72525?aud_path=/events"
+  },
+  {
+    "title": "Birding Tour of Patterson Park in Baltimore",
+    "date": "JUL 26 — 8:00 am - 9:30 am",
+    "ages": "All ages",
+    "location": "Audubon Pennsylvania, Baltimore, MD",
+    "latitude": "39.290385",
+    "longitude": "-76.612189",
+    "url": "https://www.audubon.org/events/birding-tour-patterson-park-baltimore"
+  },
+  {
+    "title": "Beginner Bird Walk",
+    "date": "JUL 26 — 8:00 am - 10:00 am",
+    "ages": "All ages",
+    "location": "Mitchell Lake Audubon Center, San Antonio, TX",
+    "latitude": "29.303926",
+    "longitude": "-98.4960889",
+    "url": "https://www.audubon.org/events/beginner-bird-walk-9"
+  },
+  {
+    "title": "Birding Tour of Patterson Park in Baltimore",
+    "date": "JUL 26 — 8:00 am - 9:30 am",
+    "ages": "All ages",
+    "location": "Audubon Maryland-DC, Baltimore, MD",
+    "latitude": "39.290385",
+    "longitude": "-76.612189",
+    "url": "https://www.audubon.org/events/birding-tour-patterson-park-baltimore-0"
+  },
+  {
+    "title": "Free Saturday Morning Guided Birding at Randall Davey Audubon Center & Sanctuary",
+    "date": "JUL 26 — 8:30 am - 11:30 am",
+    "ages": "All ages",
+    "location": "Randall Davey Audubon Center, Santa Fe, NM",
+    "latitude": "35.6881882",
+    "longitude": "-105.884613",
+    "url": "https://www.audubon.org/events/free-saturday-morning-guided-birding-randall-davey-audubon-center-sanctuary-9"
+  },
+  {
+    "title": "Bird Walk",
+    "date": "JUL 26 — 8:30 am - 9:30 am",
+    "ages": "All ages",
+    "location": "Iain Nicolson Audubon Center at Rowe Sanctuary, Gibbon, NE",
+    "latitude": "40.6697941",
+    "longitude": "-98.8864339",
+    "url": "https://www.audubon.org/events/bird-walk"
+  },
+  {
+    "title": "The Faerie Houses of Aullwood",
+    "date": "JUL 26 — 9:00 am - 5:00 pm",
+    "ages": "All ages",
+    "location": "Aullwood Audubon Center and Farm, Dayton, OH",
+    "latitude": "39.8732224",
+    "longitude": "-84.2752733",
+    "url": "https://www.audubon.org/events/faerie-houses-aullwood-17"
+  },
+  {
+    "title": "Group Hike",
+    "date": "JUL 26 — 9:00 am - 9:00 am",
+    "ages": "All ages",
+    "location": "Dogwood Canyon Audubon Center at Cedar Hill, Cedar Hill, TX",
+    "latitude": "32.5518",
+    "longitude": "-96.9602",
+    "url": "https://www.audubon.org/events/group-hike-8"
+  },
+  {
+    "title": "Kayaking in Ellis Bay: Stream Team Paddle Clean Up",
+    "date": "JUL 26 — 9:00 am - 12:30 pm",
+    "ages": "All ages",
+    "location": "Audubon Center at Riverlands, West Alton, MO",
+    "latitude": "38.869397",
+    "longitude": "-90.1846828",
+    "url": "https://act.audubon.org/a/kayaking-ellis-bay-stream-team-paddle?aud_path=/events"
+  },
+  {
+    "title": "On the Canals Kayaking Adventure AM",
+    "date": "JUL 26 — 10:00 am - 11:30 am",
+    "ages": "All ages",
+    "location": "Montezuma Audubon Center, Savannah, NY",
+    "latitude": "43.0456",
+    "longitude": "-76.7107",
+    "url": "https://act.audubon.org/a/on-the-canals-montezuma-kayak-adventure-saturday-july-26-10am?aud_path=/events"
   }
 ]

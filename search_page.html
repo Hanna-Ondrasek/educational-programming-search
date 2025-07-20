@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Funward | Family Event Finder</title>
+  <style>
+  body {
+    font-family: sans-serif;
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  header {
+    margin-bottom: 2rem;
+  }
+  .home-button {
+    display: inline-block;
+    background: #f0f0f0;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+  .home-button:hover {
+    background: #e0e0e0;
+  }
+  .card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .sub {
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+  .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .form-group input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+  }
+  .form-group label,
+  .form-group select,
+  .form-group button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .form-group select {
+    width: auto;
+  }
+  .form-group button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+</head>
+<body>
+
+  <header>
+  <a href="index_programming_search.html" class="home-button">🔍 Funward</a>
+</header>
+
+<h1>Find Educational Programming for Children & Families Near You</h1>
+
+<div class="form-group">
+  <input type="text" id="location" placeholder="Town or ZIP (e.g. 02139)" />
+  <input type="text" id="radius" placeholder="Miles" />
+  <label for="sort">Sort by:</label>
+  <select id="sort">
+    <option value="date">Soonest</option>
+    <option value="distance">Closest</option>
+  </select>
+  <button onclick="geocodeAndSearch()">Search</button>
+</div>
+
+  <div id="results"></div>
+
+  <script>
+    let events = [];
+
+    fetch("audubon_events.json")
+      .then(res => res.json())
+      .then(data => { events = data; })
+      .catch(err => console.error("Failed to load events:", err));
+
+    function haversine(lat1, lon1, lat2, lon2) {
+      const toRad = x => (x * Math.PI) / 180;
+      const R = 3959; // miles
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
+      const a = Math.sin(dLat / 2) ** 2 +
+                Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function geocodeAndSearch() {
+      const location = document.getElementById("location").value.trim();
+      const radius = parseFloat(document.getElementById("radius").value);
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "";
+
+      if (!location || isNaN(radius)) {
+        alert("Please enter a valid town/zip and distance.");
+        return;
+      }
+
+      const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(location)}&format=json&limit=1&countrycodes=us`;
+
+
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          if (!data.length) {
+            resultsDiv.innerHTML = "<p>Location not found. Try another town or zip.</p>";
+            return;
+          }
+
+          const lat = parseFloat(data[0].lat);
+          const lon = parseFloat(data[0].lon);
+          filterEvents(lat, lon, radius);
+        })
+        .catch(() => {
+          resultsDiv.innerHTML = "<p>Error looking up location.</p>";
+        });
+    }
+
+    function filterEvents(lat, lon, radius) {
+      const sortBy = document.getElementById("sort").value;
+
+      const filtered = events.map(e => {
+        const eventLat = parseFloat(e.latitude);
+        const eventLon = parseFloat(e.longitude);
+        if (isNaN(eventLat) || isNaN(eventLon)) return null;
+
+        const d = haversine(lat, lon, eventLat, eventLon);
+        return { ...e, distance: d };
+      }).filter(e => e && e.distance <= radius);
+
+      if (sortBy === "distance") {
+        filtered.sort((a, b) => a.distance - b.distance);
+      }
+
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "";
+
+      if (!filtered.length) {
+        resultsDiv.innerHTML = "<p>No events found in range.</p>";
+        return;
+      }
+
+      filtered.forEach(e => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerHTML = `
+          <div class="title">
+            <a href="${e.url || '#'}" target="_blank" rel="noopener">${e.title}</a>
+          </div>
+          <div>${e.date} — ${e.ages}</div>
+          <div class="sub">${e.location}</div>
+          <div>${e.distance.toFixed(1)} miles away</div>
+        `;
+        resultsDiv.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
