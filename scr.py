@@ -65,7 +65,7 @@ def _geocode_location(location_str, attempt_type="original"):
     """
     Helper function to geocode a location string with Nominatim and handle delays/retries.
     """
-    print(f"  [GEOCoding] Attempting geocoding '{attempt_type}' for: '{location_str}'")
+    print(f"   [GEOCoding] Attempting geocoding '{attempt_type}' for: '{location_str}'")
     try:
         # Nominatim requires a delay between requests
         time.sleep(1.2)  # Increased slightly to be safer than exactly 1 second
@@ -73,19 +73,19 @@ def _geocode_location(location_str, attempt_type="original"):
         loc = geolocator.geocode(location_str, timeout=10)  # Add a timeout for safety
         if loc:
             print(
-                f"  [GEOCoding] Success for '{location_str}': {loc.latitude}, {loc.longitude}"
+                f"   [GEOCoding] Success for '{location_str}': {loc.latitude}, {loc.longitude}"
             )
             return str(loc.latitude), str(loc.longitude)
         else:
-            print(f"  [GEOCoding] No results from Nominatim for: '{location_str}'")
+            print(f"   [GEOCoding] No results from Nominatim for: '{location_str}'")
             return None, None
     except (GeocoderTimedOut, GeocoderServiceError) as e:
         print(
-            f"  [GEOCoding ERROR] Nominatim service error or timeout for '{location_str}': {e}"
+            f"   [GEOCoding ERROR] Nominatim service error or timeout for '{location_str}': {e}"
         )
         return None, None
     except Exception as e:
-        print(f"  [GEOCoding ERROR] Unexpected error geocoding '{location_str}': {e}")
+        print(f"   [GEOCoding ERROR] Unexpected error geocoding '{location_str}': {e}")
         return None, None
 
 
@@ -205,6 +205,103 @@ def fetch_events_with_playwright(pages=3):
     return events
 
 
+def fetch_ymca_boston_events():
+    print("[DEBUG] Launching browser for YMCA Boston...")
+    events = []
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True
+        )  # Keep headless=True for faster runs once debugged
+        # For debugging, temporarily change to headless=False
+        # browser = p.chromium.launch(headless=False)
+        page = browser.new_page()
+        url = "https://community.ymcaboston.org/s/registration"
+
+        print(f"[DEBUG] Navigating to {url}")
+        page.goto(url, timeout=60000)
+
+        # --- IMPROVED WAITING STRATEGY ---
+        try:
+            # 1. Wait for the main table element to be visible
+            # The table has role="grid" and class "tsr-course-table"
+            page.wait_for_selector(
+                "table[role='grid'].tsr-course-table", state="visible", timeout=20000
+            )
+            print("[DEBUG] Main YMCA table is visible.")
+
+            # 2. Wait for the loading spinner to be HIDDEN
+            # Changed 'state=visible' to 'state=hidden'
+            page.wait_for_selector("div.TREX1Spinner", state="hidden", timeout=10000)
+            print("[DEBUG] YMCA loading spinner is hidden.")
+
+            # 3. Wait for at least one data row to appear
+            page.wait_for_selector(
+                "tr[data-aura-class*='TREX1WebRegistrationComponentCourseListItem']",
+                timeout=15000,
+            )
+            print("[DEBUG] YMCA table content (rows) loaded.")
+
+        except Exception as e:
+            print(
+                f"[WARN] YMCA table content not found or page did not load as expected: {e}"
+            )
+            browser.close()  # Ensure browser is closed on error
+            return events
+        # --- END IMPROVED WAITING STRATEGY ---
+
+        rows = page.locator(
+            "tr[data-aura-class*='TREX1WebRegistrationComponentCourseListItem']"
+        )
+        count = rows.count()
+        print(f"[DEBUG] Found {count} YMCA entries")
+
+        for i in range(count):
+            try:
+                row = rows.nth(i)
+                # Ensure the row is visible before trying to extract text
+                row.wait_for(
+                    state="visible", timeout=5000
+                )  # This might also be redundant if the main table/rows are already waited for. Could remove if not seeing specific issues with individual rows.
+
+                program = (
+                    row.locator("td[data-label='Program'] div").inner_text().strip()
+                )
+                course = row.locator("td[data-label='Course'] div").inner_text().strip()
+
+                start_date_el = row.locator("td[data-label='Start date']")
+                start_date = start_date_el.inner_text().strip() if start_date_el else ""
+
+                session_el = row.locator("td[data-label='Session']")
+                session = session_el.inner_text().strip() if session_el else ""
+
+                if (
+                    program.lower().startswith("adult")
+                    and "child" not in program.lower()
+                    and "family" not in program.lower()
+                ):
+                    print(f"[DEBUG] Skipping Adult-only program: {program} - {course}")
+                    continue
+
+                events.append(
+                    {
+                        "title": f"{program}: {course}",
+                        "date": start_date if start_date else session,
+                        "ages": "Varies",
+                        "location": "Greater Boston YMCA",
+                        "latitude": "42.3601",
+                        "longitude": "-71.0589",
+                        "url": url,
+                    }
+                )
+
+            except Exception as e:
+                print(f"[WARN] Error parsing YMCA row {i + 1}: {e}")
+
+        browser.close()
+    return events
+
+
 def fetch_national_audubon_events(pages=3):
     print("[DEBUG] Launching browser for National Audubon...")
     events = []
@@ -284,8 +381,9 @@ if __name__ == "__main__":
     try:
         mass_events = fetch_events_with_playwright(pages=3)
         natl_events = fetch_national_audubon_events(pages=3)
+        ymca_events = fetch_ymca_boston_events()  # Call the new YMCA function
 
-        all_events = mass_events + natl_events
+        all_events = mass_events + natl_events + ymca_events
 
         with open("audubon_events.json", "w", encoding="utf-8") as f:
             json.dump(all_events, f, ensure_ascii=False, indent=2)
